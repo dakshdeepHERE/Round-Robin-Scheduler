@@ -35,8 +35,11 @@ def round_robin(q1, q2):
             break
     return sum(waiting_time.values()) / len(waiting_time)
 
-q1 = deque()
-q2 = deque()
+print("All the processes with priority 0 will be pushed into the queue 1 i.e. Teacher's queue and all the processes "
+      "which will have priority 1 will pushed into the student's queue")
+print("Make sure you give teacher's process priority 0 and student's process priority is 1")
+q1 = deque() #Teacher's queue
+q2 = deque() #Student's queue
 n = int(input("Enter the number of processes: "))
 for i in range(n):
     bt = int(input(f"Enter burst time for process {i+1}: "))
